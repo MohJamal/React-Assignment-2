@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Comp2.css";
 
 const Comp2 = () => {
   const [username, setUsername] = useState("");
@@ -19,7 +20,7 @@ const Comp2 = () => {
   };
 
   return (
-    <div>
+    <div className="comp2">
       <p>
         {username}
         <br />
