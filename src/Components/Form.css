@@ -1,18 +1,18 @@
-.comp2 form {
+.Form form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.comp2 p {
+.Form p {
   margin-bottom: 10px;
 }
 
-.comp2 form input {
+.Form form input {
   width: 200px;
   height: 30px;
 }
 
-.comp2 form input:not(:last-child) {
+.Form form input:not(:last-child) {
   margin-bottom: 10px;
 }

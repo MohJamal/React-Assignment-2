@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Comp1 = () => {
+const Hello = () => {
   const [text, settext] = useState("Hello World");
 
   const toggleHandler = () => {
@@ -17,4 +17,4 @@ const Comp1 = () => {
   );
 };
 
-export default Comp1;
+export default Hello;

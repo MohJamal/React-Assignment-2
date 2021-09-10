@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Comp3 = () => {
+const RandomSentence = () => {
   const [sentence, setSentence] = useState("Changeable Sentence");
 
   const arr = [
@@ -29,4 +29,4 @@ const Comp3 = () => {
   );
 };
 
-export default Comp3;
+export default RandomSentence;

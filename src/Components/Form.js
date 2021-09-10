@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Comp2.css";
+import "./Form.css";
 
-const Comp2 = () => {
+const Form = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
 
@@ -20,7 +20,7 @@ const Comp2 = () => {
   };
 
   return (
-    <div className="comp2">
+    <div className="Form">
       <p>
         {username}
         <br />
@@ -38,4 +38,4 @@ const Comp2 = () => {
   );
 };
 
-export default Comp2;
+export default Form;
