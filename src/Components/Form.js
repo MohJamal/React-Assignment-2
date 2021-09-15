@@ -2,37 +2,37 @@ import React, { useState } from "react";
 import "./Form.css";
 
 const Form = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
+  const [formValues, setFormValues] = useState({
+    username: "",
+    email: "",
+  });
 
-  const usernameChangeHandler = (event) => {
-    let enteredUsername = event.target.value;
-    enteredUsername.length !== 0
-      ? setUsername(`Username: ${enteredUsername}`)
-      : setUsername("");
-  };
+  const changeEvent = (event) => {
+    let name = event.target.name;
 
-  const emailChangeHandler = (event) => {
-    let enteredEmail = event.target.value;
-    enteredEmail.length !== 0
-      ? setEmail(`Email: ${enteredEmail}`)
-      : setEmail("");
+    setFormValues({ ...formValues, [name]: event.target.value });
   };
 
   return (
     <div className="Form">
       <p>
-        {username}
+        Username: {formValues.username}
         <br />
-        {email}
+        Email: {formValues.email}
       </p>
       <form>
         <input
           type="text"
-          onChange={usernameChangeHandler}
+          onChange={changeEvent}
           placeholder="Username"
+          name="username"
         />
-        <input type="email" onChange={emailChangeHandler} placeholder="Email" />
+        <input
+          type="email"
+          onChange={changeEvent}
+          placeholder="Email"
+          name="email"
+        />
       </form>
     </div>
   );
